@@ -1,23 +1,23 @@
 # Burger Builder
 
-Demonstration of the **Builder** design pattern using a burger as an example.
+A small Java project that shows the Builder design pattern on a burger example.
 
-## Structure
+## What's inside
 
-- `Burger` — the product (immutable)
-- `BurgerBuilder` — builder interface with a fluent API
-- `ClassicBurgerBuilder`, `VeganBurgerBuilder` — two concrete builders
-- `BurgerDirector` — pre-defined recipes
-- `Main` — demo entry point
+- Burger — the product itself, immutable
+- BurgerBuilder — the builder interface with fluent setters
+- ClassicBurgerBuilder and VeganBurgerBuilder — two concrete builders
+- BurgerDirector — pre-defined recipes for common combinations
+- Main — demo entry point
 
-## How to Run
+## How to run
 
-IntelliJ IDEA:
-1. File → Open → select the `Assignment1` folder
-2. Open `src/burger/Main.java`
-3. Click the green ▶ next to `main`
+In IntelliJ IDEA:
+1. File -> Open -> select the Assignment1 folder
+2. Open src/burger/Main.java
+3. Click the green run arrow next to main
 
-Terminal:
+From the terminal:
 cd src
 javac burger/*.java
 java burger.Main
@@ -32,9 +32,9 @@ Burger burger = new ClassicBurgerBuilder()
 .withSauce("bbq")
 .build();
 
-## What It Demonstrates
+## What it shows
 
 - Step-by-step construction of a complex object
-- Two different representations (classic / vegan)
-- Validation inside `build()` — throws an exception when bun or patty is missing
-- Fluent API — every setter returns `this`
+- Two different representations built with the same interface
+- Validation in build() that throws when a required part is missing
+- Fluent API where each setter returns the builder
